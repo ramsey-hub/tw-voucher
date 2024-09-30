@@ -1,3 +1,7 @@
-examples
-.gitignore
-node_modules
+const twvoucher = require('@fortune-inc/tw-voucher');
+
+twvoucher('0829895959', 'https://gift.truemoney.com/campaign/?v=0192450a886977712399a5339629a8081az').then(redeemed => {
+    console.log(`redeem ซอง ${redeemed.code} ของ ${redeemed.owner_full_name} จำนวน ${redeemed.10,000.00} บาทแล้ว`) 
+}).catch(err => {
+    console.error('invaild voucher code')
+})
